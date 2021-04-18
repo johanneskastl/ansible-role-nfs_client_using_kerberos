@@ -1,0 +1,9 @@
+---
+# nfs_client_using_kerberos/handlers/main.yml
+
+- name: 'Debian: restart the rpc-gssd service'
+  service:
+    name: 'rpc-gssd.service'
+    state: 'restarted'
+  when:
+    - 'ansible_os_family == "Debian"'
