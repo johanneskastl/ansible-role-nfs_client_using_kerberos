@@ -1,5 +1,6 @@
 galaxy_info:
   role_name: 'nfs_client_using_kerberos'
+  namespace: 'johanneskastl'
   author: 'Johannes Kastl'
   description: 'Preparing a client to mount a kerberized NFSv4 share'
   company: 'B1 Systems GmbH'
