@@ -23,7 +23,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - { role: 'johanneskastl.nfs_client_using_kerberos' }
+         - role: 'johanneskastl.nfs_client_using_kerberos'
 
 License
 -------
