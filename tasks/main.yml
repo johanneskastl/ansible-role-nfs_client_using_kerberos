@@ -1,7 +1,7 @@
 ---
 # nfs_client_using_kerberos/tasks/main.yml
 
-- include_tasks:
+- ansible.builtin.include_tasks:
     file: Debian_configure_nfs-common.yml
   when:
     - 'ansible_os_family == "Debian"'
