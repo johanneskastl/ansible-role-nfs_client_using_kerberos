@@ -2,7 +2,7 @@
 # nfs_client_using_kerberos/tasks/Debian_configure_nfs-common.yml
 
 - name: 'Enable idmapd in /etc/default/nfs-common (needed for kerberized NFSv4)'
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: '/etc/default/nfs-common'
     regex: '^NEED_IDMAPD'
     line: 'NEED_IDMAPD=yes'
@@ -13,7 +13,7 @@
     - 'Debian: restart the rpc-gssd service'
 
 - name: 'Enable gssd in /etc/default/nfs-common (needed for kerberized NFSv4)'
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: '/etc/default/nfs-common'
     regex: '^NEED_GSSD'
     line: 'NEED_GSSD=yes'
@@ -24,7 +24,7 @@
     - 'Debian: restart the rpc-gssd service'
 
 - name: 'Start and enable the rpc-gssd service'
-  service:
+  ansible.builtin.service:
     name: 'rpc-gssd.service'
     state: 'started'
     enabled: 'true'
