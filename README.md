@@ -1,3 +1,5 @@
+![Ansible Lint](https://github.com/johanneskastl/ansible-role-nfs_client_using_kerberos/workflows/Ansible%20Lint/badge.svg)
+
 nfs_client_using_kerberos
 =========
 
